@@ -42,6 +42,29 @@ Real Bitcoin transactions mapped to licit vs illicit entities:
   Experimenting with Graph Convolutional Networks for Financial
   Forensics* (KDD 2019 workshop), arXiv:1908.02591.
 
+### BitcoinHeist Ransomware Address Dataset
+The full Bitcoin transaction graph (Jan 2009 – Dec 2018) reduced to
+daily address snapshots: 2,916,697 rows, six graph features per
+address (income, neighbors, weight, length, count, loops), labelled
+by ransomware family — 28 families drawn from the Montreal,
+Princeton, and Padua studies — or "white".
+
+- **Source:** [UCI Machine Learning Repository — dataset 526](https://archive.ics.uci.edu/dataset/526/bitcoinheist+ransomware+dataset) ·
+  Kaggle mirror ("BitcoinHeist Ransomware Dataset")
+- **Paper:** Akcora, Li, Gel & Kantarcioglu, *BitcoinHeist:
+  Topological Data Analysis for Ransomware Prediction on the Bitcoin
+  Blockchain* (IJCAI 2020).
+
+### Ethereum Fraud Accounts
+Account-level aggregates over real Ethereum activity: 9,841 accounts
+with transaction statistics (amounts sent/received, timing, contract
+interactions), 2,179 labelled fraud (22.1%) from known
+phishing/scam address lists.
+
+- **Source:** [Kaggle — vagifa/ethereum-frauddetection-dataset](https://www.kaggle.com/datasets/vagifa/ethereum-frauddetection-dataset)
+- **Use in research:** a standard small benchmark in Ethereum
+  illicit-account detection papers and coursework.
+
 ### DGraph-Fin
 Real user graph from the Finvolution P2P lending platform:
 ~3.7M nodes, ~4.3M directed edges, ~1.3% fraud.
@@ -93,6 +116,39 @@ author's BankSim covers bank transactions.
 - **Source:** [Kaggle — ealaxi/paysim1](https://www.kaggle.com/datasets/ealaxi/paysim1)
 - **Paper:** Lopez-Rojas, Elmir & Axelsson, *PaySim: A Financial
   Mobile Money Simulator for Fraud Detection* (EMSS 2016).
+
+### BankSim
+PaySim's sibling from the same author: an agent-based simulator of
+bank payments calibrated on aggregated data from a Spanish bank.
+The standard published run covers 180 simulated days: 594,643
+payments, 7,200 fraudulent (~1.2%), with thieves stealing cards and
+spending against merchant categories.
+
+- **Source:** [Kaggle — ealaxi/banksim1](https://www.kaggle.com/datasets/ealaxi/banksim1/data)
+- **Paper:** Lopez-Rojas & Axelsson, *BankSim: A Bank Payments
+  Simulator for Fraud Detection Research* (EMSS 2014).
+
+### AMLNet
+A regulation-aware multi-agent generator aligned to Australia's
+AUSTRAC rules: 1,090,173 synthetic transactions over 195 days,
+1,745 labelled laundering (~0.16%), spanning placement, layering,
+and integration plus structuring typologies. Released on Zenodo
+(CC BY 4.0).
+
+- **Source:** [Zenodo — doi:10.5281/zenodo.16736515](https://doi.org/10.5281/zenodo.16736515)
+- **Paper:** Huda et al., *AMLNet: A Knowledge-Based Multi-Agent
+  Framework to Generate and Detect Realistic Money Laundering
+  Transactions* (2025 preprint, arXiv:2509.11595).
+
+### SynthAML
+Synthetic AML transactions built with a Danish bank to benchmark
+detection methods — one of the few synthetic sets published as a
+data descriptor in a Nature Portfolio journal, and used as an
+external test set by later generators (e.g. AMLNet above).
+
+- **Source:** Jensen et al., *A Synthetic Data Set to Benchmark
+  Anti-Money Laundering Methods*, Scientific Data 10, 661 (2023),
+  doi:10.1038/s41597-023-02440-4.
 
 ### SAML-D
 Synthetic AML transaction-monitoring data: 9,504,852 transactions,
@@ -147,6 +203,29 @@ over a 49M-cluster background graph.
   Subgraph Representation Learning on the Blockchain with the
   Elliptic2 Dataset* (2024), arXiv:2404.19109.
 
+### xFraud (eBay)
+Real e-commerce transaction networks from eBay, modelled as
+heterogeneous graphs (transactions, addresses, payment tokens) with
+up to ten million transactions. Ships with the xFraud detector and
+its graph explainer.
+
+- **Source:** [GitHub — eBay/xFraud](https://github.com/eBay/xFraud)
+- **Paper:** Rao et al., *xFraud: Explainable Fraud Transaction
+  Detection on Heterogeneous Graphs* (PVLDB 15(3), 2022),
+  arXiv:2011.12193.
+
+### T-Finance & T-Social
+Two anonymized account networks from one online platform, with
+expert annotations of anomalous accounts (fraud, money laundering,
+online gambling). T-Finance is the transaction network — 39,357
+accounts, 21.2M edges, 4.6% anomalous; T-Social is the friendship
+network — 5.78M accounts, 73.1M edges, 3.0% anomalous. Both are part
+of the GADBench graph-anomaly benchmark.
+
+- **Source:** [GitHub — squareRoot3/Rethinking-Anomaly-Detection](https://github.com/squareRoot3/Rethinking-Anomaly-Detection)
+- **Paper:** Tang, Li, Gao & Li, *Rethinking Graph Neural Networks
+  for Anomaly Detection* (BWGNN, ICML 2022).
+
 ### YelpChi & Amazon review-fraud graphs
 The standard GNN fraud benchmarks: YelpChi has 45,954 review nodes
 at 14.5% fraud; Amazon (musical instruments) has 11,944 user nodes
@@ -156,6 +235,29 @@ repository.
 - **Paper:** Dou et al., *Enhancing Graph Neural Network-based Fraud
   Detectors against Camouflaged Fraudsters* (CARE-GNN, CIKM 2020);
   also PC-GNN (CIKM 2021) and most graph-fraud papers since.
+
+## Adjacent fraud domains (insurance & healthcare)
+
+### Healthcare Provider Fraud Detection Analysis (CMS Medicare)
+US Medicare claims restructured for provider-level classification:
+5,410 providers, ~558,000 inpatient/outpatient claims, 138,556
+beneficiaries, with a `PotentialFraud` label on 9.4% of providers.
+Used by dozens of papers and projects — with a caveat: the label is
+per provider (not per claim) and its assignment method is
+undocumented, so treat results on it as pipeline practice, not
+evidence about real Medicare fraud rates.
+
+- **Source:** Kaggle — "Healthcare Provider Fraud Detection
+  Analysis" (rohitrox)
+
+### Vehicle Insurance Claim Fraud (fraud_oracle.csv)
+The long-circulating auto-claims teaching dataset: 15,420 claims,
+32 mostly-categorical features, 923 labelled fraud (~6%). Its
+original source was never documented — fine for modelling practice,
+not for claims about real portfolios.
+
+- **Source:** Kaggle — search "fraud_oracle" / "Vehicle Insurance
+  Claim Fraud Detection"
 
 ## Meta-benchmark
 

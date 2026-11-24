@@ -15,3 +15,12 @@ Elliptic++,real-anonymized,cryptocurrency AML,"~823K addresses + transaction gra
 Elliptic2,real-anonymized,cryptocurrency AML subgraphs,"122K labelled subgraphs / 49M clusters",,https://arxiv.org/abs/2404.19109,"Bellei et al., 2024 (arXiv:2404.19109)"
 YelpChi / Amazon review graphs,real-anonymized,review fraud,"45,954 / 11,944 nodes",14.5% / 9.5%,https://github.com/YingtongDou/CARE-GNN,"Dou et al., CIKM 2020 (CARE-GNN)"
 Amazon Fraud Dataset Benchmark,meta-benchmark,multi-domain,varies,varies,https://github.com/amazon-science/fraud-dataset-benchmark,"Amazon Science, Fraud Dataset Benchmark"
+BankSim,synthetic-simulated,bank payments,"594,643 transactions",~1.2%,https://www.kaggle.com/datasets/ealaxi/banksim1/data,"Lopez-Rojas & Axelsson, EMSS 2014"
+BitcoinHeist,real,cryptocurrency ransomware,"2,916,697 address snapshots",28 families + white,https://archive.ics.uci.edu/dataset/526/bitcoinheist+ransomware+dataset,"Akcora et al., IJCAI 2020"
+Ethereum Fraud Accounts,real,cryptocurrency accounts,"9,841 accounts",22.1%,https://www.kaggle.com/datasets/vagifa/ethereum-frauddetection-dataset,Kaggle benchmark (Etherscan-derived labels)
+xFraud (eBay),real,e-commerce transaction graph,"up to 10M transactions",,https://github.com/eBay/xFraud,"Rao et al., PVLDB 2022 (arXiv:2011.12193)"
+T-Finance / T-Social,real-anonymized,account anomaly graphs,"39,357 / 5.78M accounts",4.6% / 3.0%,https://github.com/squareRoot3/Rethinking-Anomaly-Detection,"Tang et al., ICML 2022 (BWGNN)"
+AMLNet,synthetic-simulated,AML transactions,"1,090,173 transactions",0.16%,https://doi.org/10.5281/zenodo.16736515,"Huda et al., 2025 (arXiv:2509.11595)"
+SynthAML,synthetic-simulated,AML transactions,,,https://doi.org/10.1038/s41597-023-02440-4,"Jensen et al., Scientific Data 2023"
+Healthcare Provider Fraud (CMS),real-derived,healthcare claims,"5,410 providers / ~558K claims",9.4% of providers,Kaggle (search: Healthcare Provider Fraud Detection Analysis),"CMS Medicare-derived; label method undocumented"
+Vehicle Insurance Claim Fraud (fraud_oracle),undocumented,auto insurance claims,"15,420 claims",~6%,Kaggle (search: fraud_oracle),"Teaching dataset; original source undocumented"
