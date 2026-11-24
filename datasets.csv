@@ -11,7 +11,7 @@ SAML-D,synthetic-simulated,AML transaction monitoring,"9,504,852 transactions",0
 IBM Credit Card Transactions (TabFormer),synthetic-simulated,card transactions,"24M+ transactions",~0.1-0.2%,https://www.kaggle.com/datasets/ealtman2019/credit-card-transactions,"Padhi et al., ICASSP 2021; Altman, ICAIF 2021"
 Sparkov Credit Card Transactions,synthetic-simulated,card transactions,"1,296,675 train + 555,719 test",~0.5%,https://www.kaggle.com/datasets/kartik2112/fraud-detection,"Harris, Sparkov Data Generation (GitHub)"
 Fraud Detection Handbook simulated,synthetic-simulated,card transactions,"~1.8M transactions",~0.4%,https://github.com/Fraud-Detection-Handbook/simulated-data-raw,"Le Borgne et al., Reproducible ML for Credit Card Fraud Detection (2022)"
-Elliptic++,real-anonymized,cryptocurrency AML,"~823K addresses + transaction graph",,https://github.com/git-disl/Elliptic-PP,"Elmougy & Liu, 2023"
+Elliptic++,real-anonymized,cryptocurrency AML,"~823K addresses + transaction graph",,Kaggle / GitHub (search: Elliptic++),"Elmougy & Liu, 2023"
 Elliptic2,real-anonymized,cryptocurrency AML subgraphs,"122K labelled subgraphs / 49M clusters",,https://arxiv.org/abs/2404.19109,"Bellei et al., 2024 (arXiv:2404.19109)"
 YelpChi / Amazon review graphs,real-anonymized,review fraud,"45,954 / 11,944 nodes",14.5% / 9.5%,https://github.com/YingtongDou/CARE-GNN,"Dou et al., CIKM 2020 (CARE-GNN)"
 Amazon Fraud Dataset Benchmark,meta-benchmark,multi-domain,varies,varies,https://github.com/amazon-science/fraud-dataset-benchmark,"Amazon Science, Fraud Dataset Benchmark"
